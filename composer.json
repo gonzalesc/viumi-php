@@ -1,0 +1,22 @@
+{
+  "name": "gonzalesc/viumi-php",
+  "description": "Cliente Viumi API para PHP",
+  "keywords": ["viumi", "client", "api", "php", "shipping", "woocommerce"],
+  "homepage": "https://www.viumi.com.ar/",
+  "type": "library",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Gonzalesc",
+      "homepage": "https://github.com/gonzalesc/viumi-php/contributors"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.3.3",
+    "rmccue/requests": ">=1.0"
+  },
+  "autoload": {
+    "classmap": ["lib/Viumi/"]
+  }
+}
