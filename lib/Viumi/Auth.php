@@ -30,7 +30,7 @@ class Auth extends Resource {
 	 */
 	public function GetToken() {
 		
-		if( !is_null($this->Token) )
+		if( ! is_null($this->Token) )
 			return $this->Token;
 
 		$this->DataToken = $this->CreateToken();

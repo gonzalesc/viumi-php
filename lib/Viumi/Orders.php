@@ -17,6 +17,6 @@ class Orders extends Resource {
 	 * @return post an order.
 	 */
 	public function create( $data = NULL ) {
-		return $this->request( "POST", self::URL_ORDERS, $this->viumi->GetToken(), $data );
+		return $this->request( "POST", self::URL_ORDERS, $this->viumi->Auth->GetToken(), $data );
 	}
 }
