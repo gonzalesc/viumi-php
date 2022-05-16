@@ -21,6 +21,11 @@ class Client {
 					'Content-Type'		=> 'application/vnd.api+json',
 					'Accept'			=> 'application/vnd.api+json',
 				];
+			} else {
+				$headers = [
+					'Content-Type'		=> 'application/json',
+					'Accept'			=> '*/*',
+				];
 			}
 			
 			$options = [ 'timeout' => 120 ]; 

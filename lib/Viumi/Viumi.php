@@ -21,16 +21,16 @@ class Viumi {
 	 */
 	public function __construct( $access ) {
 		
-		$this->access = (object) $access;
+		$this->access = $access;
 		
-		if ( ! isset( $this->access->client_id ) ||
-			! isset( $this->access->client_secret )
+		if( empty( $this->access['client_id'] ) ||
+			empty( $this->access['client_secret'] )
 		) {
 		  throw new Errors\InvalidOptions();
 		}
 
-		$this->access->grant_type 	= 'client_credentials';
-		$this->access->scope 		= '*';
+		$this->access['grant_type'] 	= 'client_credentials';
+		$this->access['scope'] 			= '*';
 
 		$this->Auth 	= new Auth( $this );
 		$this->Orders	= new Orders( $this );
